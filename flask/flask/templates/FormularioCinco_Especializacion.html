@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="iso-8859-1">
+    <meta name="Descripcion" content="Ejemplo de HTML5">
+    <meta name="Keywords" content="HTML5,CSS3,JavaScript,Php,formularios">
+    <title>
+        Connecting Extraordinay People - Formulario Descripcion
+    </title>
+<link rel="stylesheet" href="misestilos.css">
+</head>
+<body link="#2E942E" vlink="#B71F3B" alink="#F7AD23" bgcolor="#DAF1FA">
+    <header> 
+        <center>
+            <font size="10" color="#1D1168" face="Couture"> Connecting Extraordinary People </br></font> 
+            <img center src="conexion.gif" alt="La imagen no puede ser mostrada" width="110" height="150"> <br> <br>
+            <font color="#383852" face="Couture" size="3"> 
+             Bienvenido. 
+            </font> 
+        </center>
+        </header>
+        <section>
+    <form method="post" action="pagina5.php">
+        <p> <font face="Helvetica"> 
+            <center> <h4> Crear especializacion: </h4> </center> <br>
+                <table align="center" cellspacing="10" cellpadding="3" bgcolor="#F7ADCB" bordercolor="#C2A2AF"> 
+                    <tr> 
+                        <th align="left"> Categoria: </th>
+                            <th align="left"> <select name="categoria">
+                    <option value="A10"> Limpieza </option>
+                    <option value="A20"> Lavado de ropas </option>
+                    <option value="A30"> Cocina </option>
+					<option value="A40"> Planchado de ropa </option>
+                    <option value="A50"> Mercado </option>
+                    <option value="C10"> Niñeras </option>
+					<option value="C20"> Acompañamiento adulto mayor </option>
+                    <option value="D10"> Paseo de mascotas </option>
+                    <option value="D20"> Daycare  </option>
+					<option value="E10"> Conductor bilingue </option>
+                    <option value="E20"> Transporte escolar </option>
+                    <option value="E30"> Eventos </option>
+					<option value="E40"> Diario </option>
+                    <option value="E50"> Chofer </option>
+                </select> </th> 
+                    </tr>
+                    <tr> 
+                        <th align="left"> Cedula trabajador: </th>
+                            <th align="left"> <select name="cedula">
+                    <option value="37740462"> Olga Milena Suarez Triana </option>
+                    <option value="1091458711"> Andres David Gutierrez Cepeda </option>
+                    <option value="94516114"> Oscar Felipe Amaya Camargo </option>
+					<option value="78514022"> Luis Quintero Serrano </option>
+                    <option value="1096874112"> Marcela Perez Porras </option>
+                </select> </th> 
+                        </tr>
+                    <tr> 
+                        <th align="left"> Tipo de servicio:  </th>
+                    </tr>
+                    <tr>
+                        <td> <input type="checkbox" name="serv[]" value="Por horas"/> Por horas </td>
+                        <td> <input type="checkbox" name="serv[]" value="Por jornada"/> Por jornada </td>
+                        <td> <input type="checkbox" name="serv[]" value="Por servicio"/> Por servicio </td>
+                    </tr>
+                    <tr> 
+                        <th align="left"> Valor servicio: </th>
+                            <td colspan="2"> <input type="text" name="valor" value="0 "> </td>
+                    </tr>
+					<tr> 
+                        <th align="left"> Valor hora: </th>
+                            <td colspan="2"> <input type="text" name="vhora" value="0"> </td>
+                    </tr>
+					<tr> 
+                        <th align="left"> Valor jornada: </th>
+                            <td colspan="2"> <input type="text" name="vjornada" value="0"> </td>
+                    </tr>
+                    <tr> 
+                        <th align="left" colspan="3"> Descripcion: </th> 
+                    </tr>
+                    <tr> 
+                        <th align="center" colspan="3"> <textarea name="descripcion" rows="8" cols="30">Describe tus conocimientos y experiencia </textarea> </th>
+                    </tr>
+                    <tr> 
+                        <td align="center"> <input type="submit" value="Guardar"/> </td>
+                        <td align="center"> <input type="reset" value="Limpiar"/> </td>
+                        <td align="center"> <input type ='button' value = 'Regresar' onclick="window.open('Proyecto_v2.html', 'width=800,height=600');"/> </td>
+                    </tr>
+                </table>
+            </font>
+        </p>
+    </form>
+        </section>
+        <footer>
+                <br> <br>
+                <font face="Helvetica" >
+                <table width="100%">
+                    
+                    <tr> 
+                        <td width="25%" align="center"> 
+                            <a href="FormularioUno_Trabajador.html"> Registrarse como trabajador </a>
+                        </td> 
+                        <td width="25%" align="center"> 
+                            <a href="FormularioDos_Usuario-html"> Registrarse como usuario </a>
+                        </td>
+                        <td width="25%" align="center"> 
+                            <a href="FormularioTres_Contrato.html"> Crear contrato </a> 
+                        </td>
+                        <td width="25%" align="center">
+                            <a href="FormularioCuatro_Solicitud.html"> Enviar solicitud </a>
+                        </td>
+                    </tr>
+                </table>
+                </font>
+            </footer>
+</body>
+</html>

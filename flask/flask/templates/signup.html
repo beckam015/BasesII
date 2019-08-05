@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+{% block body %} 
+<!--
+<div class="jumbotron">
+    <form method="POST" action="/register" align="center" class="form-signin">
+        <center>
+            <h5 class="form-signin-heading was-validated">Registrate aquí:</h5>
+        </center>
+        <div class="form-group">
+            <input type="text" name="identificador" class="form-control" placeholder="Cedula" required autofocus> 
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <input type="text" name="usuario" class="form-control" placeholder="Usuario" required autofocus> 
+        <input type="password" name="password" class="form-control" placeholder="Password" required autofocus> 
+        <select name="rol" class="custom-select">
+            <option value="trabajador"> Trabajador </option>
+            <option value="cliente"> Cliente </option>
+        </select> <br> <br>
+        <input type ='button' class="btn btn-md btn-success btn-block" onclick="location.href='http://127.0.0.1:3000/registrarsetr'" value="Registrarse como trabajador"> </button>
+        <input type ='button' class="btn btn-md btn-success btn-block" onclick="location.href='http://127.0.0.1:3000/registrarseus'" value = 'Registrarse como usuario'> <br> 
+        ¿Ya tienes cuenta? 
+        <input type='button' class="btn btn-md btn-link btn-block" onclick="location.href='http://127.0.0.1:3000/login'" value="Inicia sesión aquí">
+    </form>
+</div>
+
+-->
+<!-- Formulario! -->
+ 
+    <div class="jumbotron">
+        <form method="POST" action="/signup" class="form-signin">
+        {{ form.hidden_tag()}}
+        <h5 class="form-signin-heading was-validated">Registrate aquí:</h5>
+        <div class="form-group">
+
+            {{ form.usuario.label(class="form-control-label")}}
+
+            {% if form.usuario.errors %}
+                {{ form.usuario(class="form-control form-control-lg is-invalid")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.usuario.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+            {% else %}
+                {{ form.usuario(class="form-control form-control-lg")}}
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.identificador.label(class="form-control-label")}}
+
+            {% if form.identificador.errors %}
+                {{ form.identificador(class="form-control form-control-lg is-invalid")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.identificador.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+            {% else %}
+                {{ form.identificador(class="form-control form-control-lg")}}
+            {% endif %}  
+
+        </div>
+
+        <div class="form-group">
+            {{ form.email.label(class="form-control-label")}}
+
+            {% if form.email.errors %}
+                {{ form.email(class="form-control form-control-lg is-invalid")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+            {% else %}
+                {{ form.email(class="form-control form-control-lg")}}
+            {% endif %}  
+
+        </div>
+
+        <div class="form-group">
+            {{ form.password.label(class="form-control-label")}}
+            {% if form.password.errors %}
+
+            {{ form.password(class="form-control form-control-lg is-invalid")}}
+                <div class="invalid-feedback">
+                    {% for error in form.password.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.password(class="form-control form-control-lg")}}
+            {% endif %}        
+        </div>
+
+        <div class="form-group">
+            {{ form.confirm_password.label(class="form-control-label")}}
+
+            {% if form.confirm_password.errors %}
+            {{ form.confirm_password(class="form-control form-control-lg is-invalid")}}
+                <div class="invalid-feedback">
+                    {% for error in form.confirm_password.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.confirm_password(class="form-control form-control-lg")}}
+            {% endif %}        
+        </div>
+
+        <div class="form-group">
+            {{ form.rol.label(class="form-control-label")}}
+
+            {% if form.rol.errors %}
+            {{ form.rol(class="form-control form-control-lg is-invalid")}}
+                <div class="invalid-feedback">
+                    {% for error in form.rol.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.rol(class="form-control form-control-lg")}}
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+        {{ form.submit(class="btn btn-md btn-success btn-block")}}
+        </div>
+        </form>
+        <div class="border-top pt-3">
+            <center>
+                ¿Ya tienes cuenta? <br> <a class="ml-2" href="{{ url_for('login')}}"> Inicia sesión aquí</a>
+            </center>
+        </div>
+    </div>
+    -->
+    
+    
+{% endblock %}

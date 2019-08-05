@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block body %} 
+    <header class="container-fluid"> 
+            <center>
+                    <font size="10" color="#1D1168" face="Couture"> Connecting Extraordinary People </br></font> 
+                    <img center src="conexion.gif" alt="La imagen no puede ser mostrada" width="110" height="150"> <br> <br>
+                   <font color="#383852" face="Couture" size="3"> Bienvenido. </font> 
+                   </center> 
+    </header>
+    <div class="container-fluid">
+    <section>
+        <form method="post" action="/crearcontrato">
+            <font face="Helvetica">
+                <p>
+                    <center>
+                        <h4> Contrato: </h4> <br>
+                    </center>
+                    <table align="center" cellspacing="10" cellpadding="3" bgcolor="#B9F4AE" bordercolor="#6D9066"> 
+                        <tr> 
+                        <th align="left"> Numero de contrato: </th>
+                        <td> <input type="text" name="contrato" value="Contrato"> </td>
+                    </tr>
+                    <tr>
+                        <th align="left"> Nombre de la solicitud: </th>
+                        <td>  <select name="solicitud">
+						<option value="0001"> Solicitud 0001</option>
+						<option value="0002"> Solicitud 0002</option>
+						<option value="0003"> Solicitud 0003</option>
+						<option value="0004"> Solicitud 0004</option>
+						<option value="0005"> Solicitud 0005</option>
+						<option value="0006"> Solicitud 0006</option>
+						</select>
+						</td>
+                    </tr>
+                    <tr>
+                        <th align="left"> Fecha de inicio: </th>
+                        <td> <input name="fechain" type="date"> </td>
+                    </tr>
+                    <tr>
+                        <th align="left"> Fecha final: </th>
+                        <td> <input name="fechafi" type="date"> </td>
+                    </tr>
+                    <tr>
+                        <th align="left"> Direccion: </th>
+                        <td> <input type="text" name="direc" value="¿Dónde es el servicio?"> </td>
+                    </tr>
+                    <tr>
+                        <th align="left"> Duración: </th>
+                        <td> <input type="text" name="duracion" value="Tiempo estimado del trabajo"> </td>
+                    </tr>
+                    <tr>
+                    
+                        <th align="left"> Costo trabajo: </th>
+                        <td> <input type="text" name="valor" value="Valor del servicio"> </td>
+                    </tr>
+                    <tr>
+                        <th align="left"> Costo materiales: </th>
+                        <td> <input type="text" name="materiales" value="Valor de los materiales"> </td>
+                    </tr>
+                    <tr>
+                        <th align="left"> Transporte: </th>
+                        <td> <input type="text" name="transporte" value="Costo de transporte"> </td>
+                    </tr>
+					<tr>
+                        <th align="left"> Total: </th>
+                        <td> <input type="text" name="total" value="Total a pagar"> </td>
+                    </tr>
+                    <tr> 
+                        <td align="center"> <input type="submit" value="Crear contrato"/> </td>
+                        <td align="center"> <input type="reset" value="Limpiar"/> </td>
+                        <td align="center"> <input type ='button' value = 'Regresar' onclick="window.open('Proyecto_v2.html', 'width=800,height=600');"/> </td>
+                    </tr>
+                    </table>
+                </p>
+            </font>
+        </form>
+    </section>
+</div>
+{% endblock %} 

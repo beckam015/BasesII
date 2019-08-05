@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block body %}
+    <center>
+        <header class="container-fluid">
+            <h1> Bienvenid@ </h1>
+        </header>
+
+        <div class="container-fluid">
+        {% for post in posts %}
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2"> <h1> {{ post.trabajador }}</h1> </a>
+                    <small class="text-muted"> {{ post.categoria }}, {{ post.descripcion }} </small>
+                </div>
+                <h2><a class="article-title"> {{ post.calificacion }} </a></h2>
+            </div>
+        </article>
+        {% endfor %}
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td> Nombre </td>
+                            <td> Email </td>
+                            <td> Cedula </td>
+                            <td> Telefono </td>
+                            <td> Direccion </td> 
+                        </tr>
+                    </thead>
+                        <tbody>
+                                {% for usuario in usuarios %}
+                                <tr>
+                                    <td> {{ usuario.0 }} </td>
+                                    <td> {{ usuario.2 }} </td>
+                                    <td> {{ usuario.6 }} </td>
+                                    <td> {{ usuario.9 }} </td>
+                                    <td> {{ usuario.8 }} </td>
+                                    <td>
+                                        <a href="/edit/{{usuario.2}}">Edit</a>
+                                        <a href="/delete/{{usuario.2}}">Eliminar</a>
+                                    </td> 
+                                </tr>
+                                {% endfor %}
+                        </tbody>
+                </table>
+            </div>
+            <main role="main" class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="conent-section">
+                            <h3> Our Sidebar </h3>
+                            <p class='text-muted'> Information </p>
+                            <ul>
+                                <li> Latest Posts </li>
+                                <li> Announcement </li>
+                                <li> etc </li>
+                            </ul>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+    </center>
+    {% endblock %}

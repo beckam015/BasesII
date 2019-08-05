@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="iso-8859-1">
+    <meta name="Descripcion" content="Ejemplo de HTML5">
+    <meta name="Keywords" content="HTML5,CSS3,JavaScript,Php,formularios">
+    <title>
+        Connecting Extraordinay People - Formulario Descripcion
+    </title>
+<link rel="stylesheet" href="misestilos.css">
+</head>
+<body link="#2E942E" vlink="#B71F3B" alink="#F7AD23" bgcolor="#F8FADA">
+    <header> 
+        <center>
+            <font size="10" color="#1D1168" face="Couture"> Connecting Extraordinary People </br></font> 
+            <img center src="conexion.gif" alt="La imagen no puede ser mostrada" width="110" height="150"> <br> <br>
+            <font color="#383852" face="Couture" size="3"> 
+             Bienvenido. 
+            </center>
+        </font> 
+    </header>
+    <section>
+        <form method="post" action="pagina4.php">
+        <p> 
+        <font face="Helvetica"> 
+            <center> <h4> Servicio solicitado: </h4> </center>
+            <table align="center" cellspacing="10" cellpadding="3" bgcolor="#DBBDF8" bordercolor="#8A789B"> 
+            <tr>
+                <th align="left"> Codigo categoria: </th>
+					<th align="left"> <select name="categoria">
+                    <option value="A10"> Limpieza </option>
+                    <option value="A20"> Lavado de ropas </option>
+                    <option value="A30"> Cocina </option>
+					<option value="A40"> Planchado de ropa </option>
+                    <option value="A50"> Mercado </option>
+                    <option value="C10"> Niñeras </option>
+					<option value="C20"> Acompañamiento adulto mayor </option>
+                    <option value="D10"> Paseo de mascotas </option>
+                    <option value="D20"> Daycare  </option>
+					<option value="E10"> Conductor bilingue </option>
+                    <option value="E20"> Transporte escolar </option>
+                    <option value="E30"> Eventos </option>
+					<option value="E40"> Diario </option>
+                    <option value="E50"> Chofer </option>
+                </select> </th> 
+            </tr>
+            <tr>
+                <th align="left"> Codigo solicitud: </th>
+                    <td>  <select name="solicitud">
+						<option value="0001"> Solicitud 0001</option>
+						<option value="0002"> Solicitud 0002</option>
+						<option value="0003"> Solicitud 0003</option>
+						<option value="0004"> Solicitud 0004</option>
+						<option value="0005"> Solicitud 0005</option>
+						<option value="0006"> Solicitud 0006</option>
+						</select>
+						</td>
+            </tr>
+            <tr>
+                <th align="left"> Tipo de servicio: </th>
+                <td> <input type="radio" name="servicio" value="Horas"/> Por horas </td> 
+                <td> <input type="radio" name="servicio" value="Jornada"/> Por jornada </td>
+                <td> <input type="radio" name="servicio" value="Servicio"/> Por servicio </td>
+            </tr>
+            <tr>
+                <th align="left"> Numero de horas: </th>
+                <td> <input type="text" name="horas" value="0"> </td>
+            </tr>
+			<tr>
+                <th align="left"> Tipo de jornada: </th>
+                <td> <input type="text" name="jornada" value="Ninguno"> </td>
+            </tr>
+            <tr>
+                <th align="left"> Valor servicio: </th>
+                <td> <input type="text" name="valor" value="Costo por servicio "> </td>
+            </tr>
+            <tr>
+                <th align="left"> Valor total: </th>
+                <td> <input type="text" name="total" value="Costo total del contrato"> </td>
+            </tr>
+            <tr>
+                <th align="left"> Estado del servicio: </th>
+                <th align="left"> <select name="Estado">
+                    <option value="Pendiente"> Pendiente </option>
+                    <option value="Aceptado"> Aceptado </option>
+                    <option value="Rechazado"> Rechazado </option>
+                </select> </th>
+            </tr>
+            <tr>
+                <td align="center"> <input type="submit" value="Enviar solicitud"/> </td>
+                <td align="center"> <input type="reset" value="Limpiar"/> </td>
+                <td align="center">
+                        <input type ='button' value = 'Regresar' onclick="window.open('Proyecto_v2.html', 'width=800,height=600');"/>
+                </td>
+            </tr>
+        </font>
+        </p>
+    </form>
+</section>
+<footer>
+        <font face="Helvetica">
+        <table width="100%"> 
+            <tr> 
+                <td width="25%" align="center"> 
+                    <a href="FormularioUno_Trabajador.html"> Registrarse como trabajador </a>
+                </td> 
+                <td width="25%" align="center"> 
+                    <a href="FormularioDos_Usuario.html"> Registrarse como usuario </a>
+                </td>
+                <td width="25%" align="center"> 
+                    <a href="FormularioTres_Contrato.html"> Crear contrato </a> 
+                </td>
+                <td width="25%" align="center">
+                    <a href="FormularioCinco_Especializacion.html"> Crear especializacion </a>
+                </td>
+            </tr>
+        </table>
+        </font>
+</footer>
+</body>
+</html>

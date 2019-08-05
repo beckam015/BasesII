@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<form action="/update/{{ contactos.0 }}">
+    <input type="text" name="nombre" value="{{ usuario.0 }}">
+    <input type="text" name="email" value="{ usuario.6 }}">
+    <input type="text" name="telefono" value="{{ usuario.9 }}"> 
+    <input type="submit" value="Guardar">
+</form>
+{% endblock %}

@@ -1,0 +1,240 @@
+{% extends "layout.html" %}
+
+{% block body %} 
+<!--
+    <header class="container-fluid"> 
+        <center>
+            <font size="10" color="#1D1168" face="Couture"> Connecting Extraordinary People </br></font> 
+            <img center src="conexion.gif" alt="La imagen no puede ser mostrada" width="110" height="150"> <br> <br>
+            <font color="#383852" face="Couture" size="3"> 
+             Welcome. Please, sign up. </center>
+        </font> 
+    </header>
+    <div class="container-fluid">
+    <section>
+        <form method="post" action="/registrar_usuario">
+                <font face="Helvetica">
+                        <center> 
+                            <h4> ¡Bienvenido! </br> Por favor, reg&iacutestrate </h4> 
+                        </center>
+                        <table align="center" cellpadding="3" cellspacing="10" bgcolor="#F3B49F" bordercolor="#957A71"> 
+                            <tr> 
+                                <th align="left"> Nombre: </th>
+                                    <td colspan="3"> 
+                                        <input name="nombre_u" type="text" value="Nombre"> 
+                                    </td>
+                            </tr>
+                            <tr>
+                                <th align="left"> Apellido: </th>
+                                    <td colspan="3"> 
+                                        <input name="apellido_u" type="text" value="Apellido"> 
+                                    </td>
+                            </tr>
+                            <tr>
+                                <th align="left"> Cedula: </th>
+                                    <td colspan="3"> 
+                                        <input name="cedula_u" type="text" value="Cedula"> 
+                                    </td>
+                            </tr>
+                            <tr> 
+                                <th align="left"> Soy: </th>
+                                    <td> 
+                                        <input name="genero" type="radio" value="Mujer" /> Mujer 
+                                    </td>
+                                    <td> 
+                                        <input name="genero" type="radio" value="Hombre" /> Hombre 
+                                    </td>
+                                    <td> 
+                                        <input name="genero" type="radio" value="Otro" /> Otro 
+                                    </td>
+                            </tr>
+                            <tr> 
+                                <th align="left"> Fecha de nacimiento: </th>
+                                    <td colspan="3"> 
+                                        <input name="fecha" type="date"> 
+                                    </td>
+                            </tr>
+                            <tr>
+                                <th align="left"> Email:  </th>
+                                <td colspan="3"> 
+                                    <input name="email" type="text" value="Correo electronico">
+                                </td> 
+                            </tr>
+                            <tr>
+                                <th align="left"> Ciudad: </th>
+                                <td colspan="3"> 
+                                <select name="ciudades"> 
+                                    <option value="001"> Bogota </option> 
+                                    <option value="002"> Bucaramanga </option>
+                                    <option value="003"> Medellin </option>
+                                    <option value="004"> Cali </option> 
+                                </select> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th align="left"> Direccion: </th>
+                                    <td colspan="3"> 
+                                        <input name="direc_u" type="text" value="Direccion">
+                                    </td> 
+                            </tr>
+                            <tr>
+                                <th align="left"> Telefono: </th>
+                                <td colspan="3">
+                                    <input name="tel" type="text" value="Telefono">
+                                </td> 
+                            </tr>
+                            <tr> 
+                                <td align="center"> 
+                                    <input type="submit" value="Registrarse"/> 
+                                </td>
+                                <td align="center">  
+                                    <input type="reset" value="Limpiar"/> 
+                                </td>
+                            </tr>
+                        </p>
+                        </table>
+                </font>
+        </form>
+-->
+<!-- Formulario final -->
+        <div class="jumbotron">
+            <form method="POST" action="/registrar_usuario" class="form-signin">
+            {{ form.hidden_tag()}}
+            <h5 class="form-signin-heading was-validated">Crea tu perfil:</h5>
+            <div class="form-group">
+    
+                {{ form.cedula.label(class="form-control-label")}}
+    
+                {% if form.cedula.errors %}
+                    {{ form.cedula(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.cedula.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                {% else %}
+                    {{ form.cedula(class="form-control form-control-lg")}}
+                {% endif %}
+            </div>
+    
+            <div class="form-group">
+                {{ form.nombre.label(class="form-control-label")}}
+    
+                {% if form.nombre.errors %}
+                    {{ form.nombre(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.nombre.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                {% else %}
+                    {{ form.nombre(class="form-control form-control-lg")}}
+                {% endif %}  
+    
+            </div>
+    
+            <div class="form-group">
+                {{ form.apellido.label(class="form-control-label")}}
+    
+                {% if form.apellido.errors %}
+                    {{ form.apellido(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.apellido.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                {% else %}
+                    {{ form.apellido(class="form-control form-control-lg")}}
+                {% endif %}  
+    
+            </div>
+
+            <div class="form-group">
+                {{ form.genero.label(class="form-control-label")}}
+                {% if form.genero.errors %}
+    
+                {{ form.genero(class="form-control form-control-lg is-invalid")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.genero.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.genero(class="form-control form-control-lg")}}
+                {% endif %}        
+            </div>
+
+            <div class="form-group">
+                {{ form.fechanac.label(class="form-control-label")}}
+                {% if form.fechanac.errors %}
+    
+                {{ form.fechanac(class="form-control form-control-lg is-invalid")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.fechanac.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.fechanac(class="form-control form-control-lg")}}
+                {% endif %}        
+            </div>
+    
+            <div class="form-group">
+                {{ form.email.label(class="form-control-label")}}
+    
+                {% if form.email.errors %}
+                {{ form.email(class="form-control form-control-lg is-invalid")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.email(class="form-control form-control-lg")}}
+                {% endif %}        
+            </div>
+    
+            <div class="form-group">
+                {{ form.telefono.label(class="form-control-label")}}
+    
+                {% if form.telefono.errors %}
+                {{ form.telefono(class="form-control form-control-lg is-invalid")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.telefono.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.telefono(class="form-control form-control-lg")}}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.direccion.label(class="form-control-label")}}
+    
+                {% if form.direccion.errors %}
+                {{ form.direccion(class="form-control form-control-lg is-invalid")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.direccion.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.direccion(class="form-control form-control-lg")}}
+                {% endif %}
+            </div>
+    
+    
+            <div class="form-group">
+            {{ form.submit(class="btn btn-md btn-success btn-block")}}
+            </div>
+            </form>
+            <div class="border-top pt-3">
+                <center>
+                    ¿Ya tienes cuenta? <br> <a class="ml-2" href="{{ url_for('login')}}"> Inicia sesión aquí</a>
+                </center>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %} 

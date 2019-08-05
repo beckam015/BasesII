@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block body %} 
+<!--
+<div class="jumbotron">
+    <form method="POST" action="/login" class="form-signin"> 
+        <center>
+            <h5 class="form-signin-heading">Ingrese sus datos:</h5>
+        </center>
+        <input type="text" name="usuario" class="form-control" placeholder="Usuario" required autofocus> 
+        <input type="password" name="password" class="form-control" placeholder="Password" required autofocus> 
+        <div class="checkbox">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        <input type ='button' class="btn btn-md btn-success btn-block" onclick="location.href='http://127.0.0.1:3000/perfiltra'" value="Ingresar"> </button>
+    </form>
+</div>  
+-->
+
+<!-- Formulario! -->
+<div class="jumbotron">
+    <form method="POST" action="/iniciosesion" class="form-signin">
+    {{ form.hidden_tag()}}
+    <h5 class="form-signin-heading was-validated">Inicia sesión aquí:</h5>
+    <div class="form-group">
+        {{ form.usuario.label(class="form-control-label")}}
+
+        {% if form.usuario.errors %}
+        {{ form.usuario(class="form-control form-control-lg is-invalid")}}
+            <div class="invalid-feedback">
+                {% for error in form.usuario.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+
+        {% else %}
+            {{ form.usuario(class="form-control form-control-lg")}}
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.password.label(class="form-control-label")}}
+        {% if form.password.errors %}
+
+            {{ form.password(class="form-control form-control-lg is-invalid")}}
+                <div class="invalid-feedback">
+                    {% for error in form.password.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+
+        {% else %}
+            {{ form.password(class="form-control form-control-lg")}}
+        {% endif %}        
+    </div>
+
+    <div class="form-group">
+        Remember me:
+
+        {{ form.remember(class="form-check-input")}}
+    </div>
+
+    <div class="form-group">
+    {{ form.submit(class="btn btn-md btn-success btn-block")}}
+    </div>
+
+    <div>
+        <small class="text-muted ml-2"> 
+            <a href="#"> ¿Olvidaste tu contraseña? </a>
+        </small>
+    </div> 
+    </form>
+    <div class="border-top pt-3">
+        <center>
+            ¿No tienes cuenta aún? <br> <a class="ml-2" href="{{ url_for('signup')}}"> Registrate aquí</a>
+        </center>
+    </div>
+</div>
+
+{% endblock %}

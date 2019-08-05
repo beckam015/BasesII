@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="iso-8859-1">
+    <meta name="Descripcion" content="Ejemplo de HTML5">
+    <meta name="Keywords" content="HTML,CSS3,JavaScript">
+        <title>
+            Connecting extraordinary people
+        </title>
+    <link rel="stylesheet" href="misestilos.css">
+</head>
+
+<body bgcolor="#F9E9CE" link="#2E942E" vlink="#B71F3B" alink="#F7AD23">
+    <header > 
+        <center>
+         <font size="10" color="#1D1168" face="Couture"> Connecting Extraordinary People </br></font> 
+            <img center src="conexion.gif" alt="La imagen no puede ser mostrada" width="110" height="150"> <br> <br>
+        <font color="#383852" face="Couture" size="3"> Bienvenido. </font> 
+        </center>
+    </header>
+    <nav>
+    </nav>
+    <section>
+        <form method="post" action="/registrar_worker">
+        <font face="Helvetica">
+            <p>
+        <center> 
+            <h4> ¡Bienvenido! </br> Por favor, reg&iacutestrate. </h4>
+        </center>
+            <table align="center" cellpadding="5" cellspacing="3" bgcolor="#B4CBFA" bordercolor="#8594B1"> 
+                <tr> 
+                    <th align="left"> Nombre: </th>
+                        <td colspan="3"> 
+                            <input name="nombre_t" type="text" value="Nombre"> 
+                        </td>
+                </tr>
+                <tr>
+                    <th align="left"> Apellido: </th>
+                        <td colspan="3"> 
+                            <input name="apellido_t" type="text" value="Apellido"> 
+                        </td>
+                </tr>
+                <tr>
+                    <th align="left"> Cedula: </th>
+                        <td colspan="3"> 
+                            <input name="cedula_t" type="text" value="Cedula"> 
+                        </td>
+                </tr>
+                <tr> 
+                    <th align="left"> Soy: </th>
+                        <td> 
+                            <input name="genero" type="radio" value="Mujer" /> Mujer 
+                        </td>
+                        <td> 
+                            <input name="genero" type="radio" value="Hombre" /> Hombre 
+                        </td>
+                        <td> 
+                            <input name="genero" type="radio" value="Otro" /> Otro 
+                        </td>
+                </tr>
+                <tr> 
+                    <th align="left"> Fecha de nacimiento: </th>
+                        <td colspan="3"> 
+                            <input name="fecha" type="date"> 
+                        </td>
+                </tr>
+                <tr> 
+                    <th align="left"> Edad: </th>
+                        <td colspan="3">
+                            <input name="age" type="text" value="Edad">
+                        </td>  
+                </tr>
+                <tr>
+                    <th align="left"> Email:  </th>
+                    <td colspan="3"> 
+                        <input name="email" type="text" value="Correo electronico">
+                    </td> 
+                </tr>
+                <tr>
+                    <th align="left"> Ciudad: </th>
+                    <td colspan="3"> 
+                    <select name="ciudades"> 
+                        <option value="001"> Bogota </option> 
+                        <option value="002"> Bucaramanga </option>
+                        <option value="003"> Medellin </option>
+                        <option value="004"> Cali </option> 
+                    </select> 
+                    </td>
+                </tr>
+                <tr>
+                    <th align="left"> Direccion: </th>
+                        <td colspan="3"> 
+                            <input name="direc_t" type="text" value="Direccion">
+                        </td> 
+                </tr>
+                <tr>
+                    <th align="left"> Telefono: </th>
+                    <td colspan="3">
+                        <input name="tel" type="text" value="Telefono">
+                    </td> 
+                </tr>
+                <tr> 
+                    <th align="center" colspan="4"> Describete. ¿Qué sabes hacer? </th>
+                </tr>
+                <tr>
+                    <th colspan="4"> <textarea name="descripcion" rows="8" cols="40"> Habla sobre ti </textarea> </th>
+                </tr>
+                <tr>
+                <th align="left"> ¿Viajarías fuera de la ciudad? </th>
+                    <td> 
+                        <input type="radio" name="viaje" value="Si"/> Si 
+                    </td>
+                    <td> 
+                        <input type="radio" name="viaje" value="No"/> No 
+                    </td>
+                </tr>
+                <tr>
+                    <th align="center" colspan="4"> Si tu respuesta fue sí, por favor describe a que lugar te desplazarías: </th>
+                </tr>
+                <tr> 
+                    <th colspan="4"> <textarea name="desc_viaje" rows="8" cols="40"> Viajaría a... </textarea> </th>
+                </tr>
+				<tr>
+					<th align="left"> Calificacion </th>
+					<td align="left"> 
+						<input type="text" name="calificacion" value="Calificacion">
+					</td>
+				</tr>
+				<tr>
+					<th align="left"> Numero de quejas </th>
+					<td align="left"> 
+						<input type="text" name="quejas" value="quejas">
+					</td>
+				</tr>
+				<tr>
+					<th align="left"> Ganancias </th>
+					<td align="left"> 
+						<input type="text" name="ganancias" value="ganancias">
+					</td>
+				</tr>
+				<tr>
+					<th align="left"> Codigo nivel </th>
+					<td colspan="3"> 
+                    <select name="nivel"> 
+                        <option value="10"> Novato </option> 
+                        <option value="20"> Aprendiz </option>
+                        <option value="30"> Maestro </option>
+                        <option value="40"> Experto </option> 
+                    </select> 
+                    </td>
+				</tr>
+                <tr> 
+                    <td align="center"> 
+                        <input type="submit" value="Registrarse"/> 
+                    </td>
+                    <td align="center"> 
+                        <input type="reset" value="Limpiar"/>
+                    </td>
+                    <td align="center"> <input type ='button' value = 'Regresar' onclick="window.open('Proyecto_v2.html', 'width=800,height=600');"/> </td>
+                </tr>
+            </table>
+        </font>
+        </form>
+    </section>
+    <footer>
+            <br> <br>
+            <font face="Helvetica" >
+            <table width="100%">
+                
+                <tr> 
+                    <td width="25%" align="center"> 
+                        <a href="FormularioDos_Usuario.html"> Registrarse como usuario </a>
+                    </td> 
+                    <td width="25%" align="center"> 
+                        <a href="FormularioCuatro_Solicitud.html"> Enviar solicitud </a>
+                    </td>
+                    <td width="25%" align="center"> 
+                        <a href="FormularioTres_Contrato.html"> Crear contrato </a> 
+                    </td>
+                    <td width="25%" align="center">
+                        <a href="FormularioCinco_Especializacion.html"> Agregar especializacion </a>
+                    </td>
+                </tr>
+            </table>
+            </font>
+        </footer>
+</body>
+</html>

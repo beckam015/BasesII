@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block body %}
+    <center>
+        <header class="container-fluid">
+            {% if nombre %}
+                <h1> Hola {{nombre}} </h1>
+            {% else %}
+                <h1> Hola </h1>
+            {% endif %}
+        </header>
+
+        <div class="container-fluid">
+                {% for post in posts %}
+                <article class="media content-section">
+                    <div class="media-body">
+                        <div class="article-metadata">
+                            <a class="mr-2"> <h1> {{ post.trabajador }}</h1> </a>
+                            <small class="text-muted"> {{ post.categoria }}, {{ post.descripcion }} </small>
+                        </div>
+                        <h2><a class="article-title"> {{ post.calificacion }} </a></h2>
+                    </div>
+                </article>
+                {% endfor %}
+
+        <!-- Tabla que guarda los datos ingresados -->
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <td> Nombre </td>
+                    <td> Email </td>
+                    <td> Cedula </td>
+                    <td> Telefono </td>
+                    <td> Direccion </td>
+                    <td> Calificacion </td>
+                    <td> Nivel </td>
+                    <td> Ganancias </td> 
+                </tr>
+            </thead>
+                <tbody>
+                    {% for trabajador in trabajadores %}
+                        <tr>
+                            <td> {{ trabajador.0 }} </td>
+                            <td> {{ trabajador.2 }} </td>
+                            <td> {{ trabajador.6 }} </td>
+                            <td> {{ trabajador.9 }} </td>
+                            <td> {{ trabajador.8 }} </td>
+                            <td> {{ trabajador.14 }} </td>
+                            <td> {{ trabajador.17 }} </td>
+                            <td> {{ trabajador.16 }} </td>
+                            <td>
+                                <a href="/edit/{{trabajador.2}}">Edit</a>
+                                <a href="/delete/{{trabajador.2}}">Eliminar</a>
+                            </td> 
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </center>
+    {% endblock %}
